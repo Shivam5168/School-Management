@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use("/api/teacher", teacherRoutes);
+app.use("/api/school-management", teacherRoutes);
 
 
 const PORT = process.env.PORT || 5000;

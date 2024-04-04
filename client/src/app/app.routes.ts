@@ -1,5 +1,3 @@
 import { Routes } from '@angular/router';
-import { AuthComponent } from './auth/auth.component';
 
-export const routes: Routes = [{path:'', redirectTo:'/login', pathMatch:'full'},
-{path:'login', component:AuthComponent}];
+export const routes: Routes = [{path:'', redirectTo:'/login', pathMatch:'full'},{path : '', loadChildren:() => import('./pages/pages.routes').then(m => m.PagesModule)}];

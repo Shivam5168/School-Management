@@ -41,8 +41,9 @@ export class AuthComponent {
         next: (Response : AuthResponse) => {
           if(Response.success === true){
           localStorage.setItem("token", Response.token);
-          this.router.navigate(['dashboard']);
           this.toast.success('You are Successfully Login');
+          this.router.navigate(['dashboard']);
+         
           }
         },
         error: (error) => {},
